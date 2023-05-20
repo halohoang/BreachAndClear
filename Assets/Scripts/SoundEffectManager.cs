@@ -9,6 +9,9 @@ public class SoundEffectManager : MonoBehaviour
 	[SerializeField] private AudioSource _gunShotAudioSource;
 	[SerializeField] private AudioClip _gunShotAudioClip;
 
+	[SerializeField] private AudioClip _backgroundAudioClip;
+		[SerializeField] private AudioSource _backgroundAudioSource;
+
 	//[SerializeField] private AudioSource _playerHurtAudioSource;
 	//[SerializeField] private AudioClip _playerHurtAudioClip;
 	//[SerializeField] private AudioSource _playerDeathAudioSource;
@@ -28,6 +31,10 @@ public class SoundEffectManager : MonoBehaviour
 		if (_gunShotAudioSource == null)
 		{
 			_gunShotAudioSource = GetComponent<AudioSource>();
+		}
+		if(_backgroundAudioSource != null && _backgroundAudioClip != null)
+		{
+			_backgroundAudioSource.PlayOneShot(_backgroundAudioClip);
 		}
 		//if (_enemyHurtAudioSource == null)
 		//{
