@@ -800,6 +800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 432344742}
+  _breachAudioSource: {fileID: 1787659004}
+  _breachAudioClip: {fileID: 8300000, guid: 151419385de1abd4aa5f24cb94d2d1ce, type: 3}
 --- !u!82 &1787659004
 AudioSource:
   m_ObjectHideFlags: 0
