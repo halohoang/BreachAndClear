@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 
 public class SoundEffectManager : MonoBehaviour
 {
@@ -14,8 +14,6 @@ public class SoundEffectManager : MonoBehaviour
 	//[SerializeField] private AudioSource _playerDeathAudioSource;
 	//[SerializeField] private AudioClip _playerDeathAudioClip;
 
-	[SerializeField] private AudioSource _enemyHurtAudioSource;
-	[SerializeField] private AudioClip _enemyHurtAudioClip;
 	//[SerializeField] private AudioSource _enemyDeathAudioSource;
 	//[SerializeField] private AudioClip _enemyDeathAudioClip;
 
@@ -70,13 +68,5 @@ public class SoundEffectManager : MonoBehaviour
 		{
 			_gunShotAudioSource.PlayOneShot(_gunShotAudioClip);
 		}
-	}
-	internal void EnemyHurt()
-	{
-		if (_enemyHurtAudioSource != null && _enemyHurtAudioClip != null)
-		{
-			_gunShotAudioSource.PlayOneShot(_enemyHurtAudioClip);
-		}
-
 	}
 }

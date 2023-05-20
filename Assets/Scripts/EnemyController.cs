@@ -27,8 +27,5 @@ public class EnemyController : MonoBehaviour
 											   // Destroy the enemy
 			transform.parent.gameObject.SetActive(false);
 		}
-
-		_soundEffectManager.EnemyHurt();
-
 	}
 }
