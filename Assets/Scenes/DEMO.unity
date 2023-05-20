@@ -2891,7 +2891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc63d72b141cb94b9d225f812890b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killCountMax: 2
+  _killCountMax: 8
   _killCounter: {fileID: 1310787453}
   _timerScript: {fileID: 1310787458}
 --- !u!1 &1371373374
