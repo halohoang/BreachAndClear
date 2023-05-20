@@ -7,6 +7,7 @@ public class WinLoseCondition : MonoBehaviour
 	[SerializeField] private int _killCountMax;
 	[SerializeField] private KillCounter _killCounter;
 	[SerializeField] private TimerScript _timerScript;
+	[SerializeField] private GameObject _youWinMessage;
 
 	private bool _isGameWon = false;
 
@@ -16,6 +17,7 @@ public class WinLoseCondition : MonoBehaviour
 		{
 			_isGameWon = true;
 			Debug.Log("You Win");
+			_youWinMessage.SetActive(true);
 			_timerScript.StopTimer();
 		}
 		else if (_killCounter._killCount < _killCountMax && _timerScript._timeLeft <= 0.0f && !_isGameWon)

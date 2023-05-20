@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
 		{
 			_killCounter.IncrementKillCount(); //Increment the kill count
 											   // Destroy the enemy
-			Destroy(transform.parent.gameObject);
+			transform.parent.gameObject.SetActive(false);
 		}
 
 		_soundEffectManager.EnemyHurt();
