@@ -51,7 +51,6 @@ public class ButtonHoverSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		_playAudioSource.PlayOneShot(_playAudioClip);
 		UpdateExit();
 		targetObject.SetActive(false);
 	}
@@ -67,7 +66,7 @@ public class ButtonHoverSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
 	void UpdateEnter()
 	{
-		_breachText.text = "60 SECONDS";
+		_breachText.text = "20 SECONDS ONLY";
 	}
 	void UpdateExit()
 	{

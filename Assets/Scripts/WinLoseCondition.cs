@@ -16,6 +16,8 @@ public class WinLoseCondition : MonoBehaviour
 	[SerializeField] private AudioSource _loseAudioSource;
 	[SerializeField] private AudioClip _loseAudioClip;
 
+	[SerializeField] private AudioSource _backgroundAudioSource;
+
 	private bool _isGameWon = false;
 
 	private void Start()
@@ -43,14 +45,14 @@ public class WinLoseCondition : MonoBehaviour
 			_youWinMessage.SetActive(true);
 			_timerScript.StopTimer();
 		}
-		else if (_killCounter._killCount < _killCountMax && _timerScript._timeLeft <= 0.0f && !_isGameWon)
+		else if (_killCounter._killCount < _killCountMax && _timerScript._timeLeft == 0.0f && !_isGameWon)
 		{
 			if (_loseAudioSource != null && _loseAudioClip != null)
 			{
-				_loseAudioSource.PlayOneShot(_loseAudioClip);
+				_backgroundAudioSource.Stop();
+				//_loseAudioSource.PlayOneShot(_loseAudioClip);
 			}
 			_youLoseMessage.SetActive(true);
-			Debug.Log("You Lose");
 			_timerScript.StopTimer();
 		}
 	}
